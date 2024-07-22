@@ -44,6 +44,7 @@ export function UseNewContactsModalController() {
     control,
     setValue,
     reset,
+    resetField,
     handleSubmit: hookFormHandleSubmit,
     formState: { errors },
   } = useForm<FormData>({
@@ -104,5 +105,6 @@ export function UseNewContactsModalController() {
     handleResetLocationCheckbox,
     handleResetPhone,
     handleResetShowSocials,
+    resetField,
   };
 }

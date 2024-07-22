@@ -27,6 +27,7 @@ export function NewContactModal() {
     handleLocationCheckboxChange,
     handleResetLocationCheckbox,
     handleResetPhone,
+    resetField,
   } = UseNewContactsModalController();
 
   useEffect(() => {
@@ -46,10 +47,12 @@ export function NewContactModal() {
         .catch((error) => {
           alert(`Erro ao pegar coordenadas: ${error.message}`);
           handleResetLocationCheckbox();
-          reset({ latitude: '', longitude: '' });
+          resetField('latitude');
+          resetField('longitude');
         });
     } else {
-      reset({ latitude: '', longitude: '' });
+      resetField('latitude');
+      resetField('longitude');
     }
   }, [checkedLocationBox]);
 
@@ -67,7 +70,7 @@ export function NewContactModal() {
             {...register('nome')}
           ></Input>
 
-          <Controller
+          {/* <Controller
             control={control}
             name='grupo'
             defaultValue='E'
@@ -101,7 +104,7 @@ export function NewContactModal() {
                 ]}
               />
             )}
-          />
+          /> */}
 
           <Input placeholder='Endereço' {...register('endereco')}></Input>
           <Input placeholder='Bairro' {...register('bairro')}></Input>

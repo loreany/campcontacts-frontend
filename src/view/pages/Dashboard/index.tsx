@@ -12,7 +12,6 @@ export function Dashboard() {
         </div>
         <NewContactModal />
       </div>
-      //{' '}
     </DashboardProvider>
   );
 }
