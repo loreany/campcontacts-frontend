@@ -82,7 +82,7 @@ export function UseNewContactsModalController() {
       closeNewContactsModal();
     } catch {
       toast.error('Erro ao cadastrar o contato!');
-      console.log(data);
+      // console.log(data);
     }
   });
 
